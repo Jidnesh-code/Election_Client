@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secure Election Record Manager</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.4);
+      text-align: center;
+      padding: 40px 20px;
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(8px);
+      border-bottom: 2px solid #00c6ff;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      color: #00c6ff;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #d1e8ff;
+    }
+
+    section {
+      padding: 50px 10%;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    section h2 {
+      color: #00c6ff;
+      border-left: 5px solid #00c6ff;
+      padding-left: 10px;
+      font-size: 1.8rem;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .feature {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .feature:hover {
+      transform: translateY(-8px);
+      background: rgba(0, 198, 255, 0.2);
+    }
+
+    .feature h3 {
+      color: #00c6ff;
+      margin-bottom: 10px;
+    }
+
+    .feature p {
+      color: #e2f3ff;
+      font-size: 0.95rem;
+    }
+
+    .highlight {
+      color: #00c6ff;
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 25px;
+      color: #a0d8ff;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      border-top: 1px solid #00c6ff;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hidden {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      background: #00c6ff;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #009cd1;
+    }
+
+    ul {
+      list-style: "✅ ";
+      padding-left: 25px;
+      color: #e2f3ff;
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .flag {
+      width: 40px;
+      vertical-align: middle;
+      margin-left: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🗳️ Secure Election Record Manager <img src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" alt="India Flag" class="flag"></h1>
+    <p>Technology for Transparent, Fair & Fraud-Free Elections in India</p>
+  </header>
+
+  <section id="mission" class="hidden">
+    <h2>🇮🇳 Our Mission: Stop False Voting</h2>
+    <p>
+      False or duplicate voting has long been a major concern during elections in India. The 
+      <span class="highlight">Secure Election Record Manager</span> is designed to help 
+      <strong>identify, prevent, and eliminate fraudulent voter entries</strong> 
+      through advanced data verification and secure record management.
+    </p>
+    <p>
+      By securely storing and transferring verified voter data — including Aadhar numbers, photos, and gender information — 
+      this system helps election authorities ensure that 
+      <strong>each citizen votes only once</strong> and that every vote counted is genuine.
+    </p>
+  </section>
+
+  <section id="overview" class="hidden">
+    <h2>🔍 Overview</h2>
+    <p>
+      The <span class="highlight">Secure Election Record Manager</span> is a Java Swing + MySQL based desktop application 
+      built to safeguard election-related citizen data. It ensures 
+      <strong>data accuracy, secure authentication, and transparent record movement</strong> 
+      between verified and secure databases.
+    </p>
+  </section>
+
+  <section id="features" class="hidden">
+    <h2>⚙️ Core Features</h2>
+    <div class="feature-grid">
+      <div class="feature">
+        <h3>🔒 Secure Admin Access</h3>
+        <p>Only authorized personnel with the correct password can operate the application, reducing insider threats.</p>
+      </div>
+      <div class="feature">
+        <h3>🧾 Verified Data Movement</h3>
+        <p>Records are securely transferred from <span class="highlight">info</span> to <span class="highlight">info_copy</span> tables only after validation.</p>
+      </div>
+      <div class="feature">
+        <h3>🧠 Anti-Fraud System</h3>
+        <p>By storing Aadhar-linked voter details with images, the app helps prevent <strong>duplicate or fake entries</strong>.</p>
+      </div>
+      <div class="feature">
+        <h3>📊 Live Record Tracking</h3>
+        <p>Displays real-time counts of verified, moved, and remaining records — ensuring full transparency.</p>
+      </div>
+      <div class="feature">
+        <h3>🚫 Operation Lock</h3>
+        <p>System cannot be closed or used further until secure movement is confirmed — ensuring compliance and accountability.</p>
+      </div>
+      <div class="feature">
+        <h3>🔐 Data Encryption</h3>
+        <p>All database operations occur via encrypted JDBC connections, protecting sensitive voter data.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="benefits" class="hidden">
+    <h2>💡 Benefits to the Election System</h2>
+    <ul>
+      <li>Enhances trust and transparency in the voting process</li>
+      <li>Prevents false or duplicate votes through strict record validation</li>
+      <li>Helps Election Commission maintain clean and verified databases</li>
+      <li>Reduces manual verification errors with automated data checks</li>
+      <li>Supports Digital India initiatives for safe, paperless governance</li>
+      <li>Ensures only legitimate and verified citizens are allowed to vote</li>
+    </ul>
+  </section>
+
+  <section id="tech" class="hidden">
+    <h2>🧠 Technologies Used</h2>
+    <div class="feature-grid">
+      <div class="feature">
+        <h3>☕ Java Swing</h3>
+        <p>For an intuitive and efficient desktop interface for election officers.</p>
+      </div>
+      <div class="feature">
+        <h3>🗄️ MySQL Database</h3>
+        <p>Stores citizen records securely, including biometric image data.</p>
+      </div>
+      <div class="feature">
+        <h3>🔧 JDBC Connectivity</h3>
+        <p>Ensures seamless and secure communication between the GUI and the database.</p>
+      </div>
+      <div class="feature">
+        <h3>🇮🇳 Designed for India</h3>
+        <p>Built keeping in mind the Indian voter database system and election integrity challenges.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Secure Election Record Manager | Developed by <strong>Jidnesh</strong> | 
+    <em>Empowering India through secure and transparent voting technology.</em>
+  </footer>
+
+  <script>
+    const hiddenElements = document.querySelectorAll('.hidden');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
+    hiddenElements.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
