@@ -110,7 +110,7 @@
 
     .btn {
       display: inline-block;
-      margin-top: 15px;
+      margin: 10px 10px 0 0;
       background: #00c6ff;
       color: #fff;
       padding: 10px 20px;
@@ -232,6 +232,26 @@
         <p>Built keeping in mind the Indian voter database system and election integrity challenges.</p>
       </div>
     </div>
+  </section>
+
+  <!-- 🧩 New Section: Downloads & SQL Setup -->
+  <section id="downloads" class="hidden">
+    <h2>⬇️ Download Tools & Database Setup</h2>
+    <p>
+      Download the necessary application files and SQL setup script below.  
+      Before running the application, please import the <strong>setup.sql</strong> into your MySQL server.
+    </p>
+    <a href="downloads/Election.zip" class="btn" download>📦 Download Election.zip</a>
+    <a href="downloads/Data_Con.zip" class="btn" download>📦 Download Data_Con.zip</a>
+    <a href="downloads/setup.sql" class="btn" download>🗄️ Download setup.sql</a>
+
+    <h3 style="margin-top:30px;">📘 Manual Database Setup Instructions</h3>
+    <ol>
+      <li>Install and start MySQL Server (default port 3306).</li>
+      <li>Download and open <strong>setup.sql</strong>.</li>
+      <li>Run it in MySQL Command Line or phpMyAdmin to create the database.</li>
+      <li>Ensure your MySQL username and password match the ones in your Java app.</li>
+    </ol>
   </section>
 
   <footer>
